@@ -11,11 +11,11 @@ class ApplicationController < ActionController::Base
     @comp_move = ["rock", "paper", "scissors"].sample
 
     if @comp_move == "rock"
-      @outcome = "tied"
+      @outcome_r = "tied"
     elsif @comp_move == "paper"
-      @outcome = "lost"
+      @outcome_r = "lost"
     elsif @comp_move == "scissors"
-      @outcome = "won"
+      @outcome_r = "won"
     end
 
     render({ :template => "game_templates/user_rock.html.erb"})
@@ -25,11 +25,11 @@ class ApplicationController < ActionController::Base
     @comp_move = ["rock", "paper", "scissors"].sample
 
     if @comp_move == "rock"
-      @outcome = "won"
+      @outcome_p = "won"
     elsif @comp_move == "paper"
-      @outcome = "tied"
+      @outcome_p = "tied"
     elsif @comp_move == "scissors"
-      @outcome = "lost"
+      @outcome_p = "lost"
     end
     
     render({ :template => "game_templates/user_paper.html.erb"})
